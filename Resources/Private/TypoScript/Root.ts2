@@ -1,0 +1,16 @@
+prototype(Onedrop.SectionMenu:Menu) < prototype(TYPO3.Neos:Menu) {
+    @class = 'Onedrop\\SectionMenu\\TypoScript\\MenuImplementation'
+    templatePath = 'resource://Onedrop.SectionMenu/Private/Templates/TypoScriptObjects/Menu.html'
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
+    listAttributes = TYPO3.TypoScript:Attributes
+}
+
+prototype(Onedrop.SectionMenu:Section) < prototype(TYPO3.Neos.NodeTypes:Headline) {
+    attributes.id = ${Onedrop.SectionMenu.Section.htmlId(String.stripTags(q(node).property('title')))}
+}

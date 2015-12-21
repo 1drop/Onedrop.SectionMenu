@@ -1,0 +1,35 @@
+'Onedrop.SectionMenu:Section':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Headline': true
+  ui:
+    label: i18n
+    icon: 'icon-font'
+  properties:
+    title:
+      defaultValue: 'Enter section title here'
+      ui:
+        aloha:
+          format: []
+          link: []
+          alignment: []
+    headingType:
+      type: string
+      defaultValue: h1
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: type
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              h1:
+                label: 'Heading 1'
+              h2:
+                label: 'Heading 2'
+              h3:
+                label: 'Heading 3'
+              h4:
+                label: 'Heading 4'
+              h5:
+                label: 'Heading 5'

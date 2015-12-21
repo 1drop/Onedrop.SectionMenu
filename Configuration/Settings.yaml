@@ -1,0 +1,12 @@
+TYPO3:
+  TypoScript:
+    defaultContext:
+      'Onedrop.SectionMenu.Section': 'Onedrop\SectionMenu\Eel\Helper\SectionHelper'
+  Neos:
+    typoScript:
+      autoInclude:
+        'Onedrop.SectionMenu': TRUE
+    userInterface:
+      translation:
+        autoInclude:
+          'Onedrop.SectionMenu': ['NodeTypes/*']
