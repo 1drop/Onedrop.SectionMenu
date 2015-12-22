@@ -1,4 +1,4 @@
-prototype(Onedrop.SectionMenu:Menu) < prototype(TYPO3.Neos:Menu) {
+prototype(Onedrop.SectionMenu:Menu) < prototype(TYPO3.Neos.NodeTypes:Menu) {
     @class = 'Onedrop\\SectionMenu\\TypoScript\\MenuImplementation'
     templatePath = 'resource://Onedrop.SectionMenu/Private/Templates/TypoScriptObjects/Menu.html'
     @cache {
