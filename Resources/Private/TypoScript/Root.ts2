@@ -1,11 +1,17 @@
 prototype(Onedrop.SectionMenu:Menu) < prototype(TYPO3.Neos.NodeTypes:Menu) {
     @class = 'Onedrop\\SectionMenu\\TypoScript\\MenuImplementation'
     templatePath = 'resource://Onedrop.SectionMenu/Private/Templates/TypoScriptObjects/Menu.html'
+    node = ${node}
     @cache {
-        mode = 'uncached'
-        context {
-            1 = 'node'
-            2 = 'documentNode'
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${documentNode}
+            node = ${node}
+        }
+        entryTags {
+            1 = 'NodeType_TYPO3.Neos:Document'
+            2 = ${'Node_' + node.identifier}
+            3 = ${'NodeType_Onedrop.SectionMenu:Section'}
         }
     }
     listAttributes = TYPO3.TypoScript:Attributes
