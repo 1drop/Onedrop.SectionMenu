@@ -2,6 +2,7 @@
     "name": "onedrop/sectionmenu",
     "type": "typo3-flow-package",
     "description": "Sectionmenu for Neos",
+    "license": ["MIT"],
     "require": {
         "typo3/neos": "~2.0"
     },
