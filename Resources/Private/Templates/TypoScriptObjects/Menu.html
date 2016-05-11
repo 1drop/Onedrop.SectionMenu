@@ -18,7 +18,7 @@
                     <f:if condition="{item.hasChildren}">
                         <f:if condition="{item.subItems}">
                             <ul>
-                                <f:render section="itemsList" arguments="{items: item.subItems}" />
+                                <f:render section="itemList" arguments="{items: item.subItems}" />
                             </ul>
                         </f:if>
                         <f:if condition="{item.sections}">
