@@ -2,16 +2,17 @@
 namespace Onedrop\SectionMenu\ViewHelpers\Format;
 
 use Onedrop\SectionMenu\Utility\StringFormat;
-use TYPO3\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3\Fluid\Core\ViewHelper\Facets\CompilableInterface;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper;
+use Neos\FluidAdaptor\Core\ViewHelper\Facets\CompilableInterface;
 
 /**
  * Wrapper for ID formatting utility
  *
  * @api
  */
-class SectionIdViewHelper extends AbstractViewHelper implements CompilableInterface {
+class SectionIdViewHelper extends AbstractViewHelper implements CompilableInterface
+{
 
 
     /**
@@ -19,7 +20,7 @@ class SectionIdViewHelper extends AbstractViewHelper implements CompilableInterf
      * @see AbstractViewHelper::isOutputEscapingEnabled()
      * @var boolean
      */
-    protected $escapeOutput = FALSE;
+    protected $escapeOutput = false;
 
     /**
      * Replaces newline characters by HTML line breaks.
@@ -28,7 +29,8 @@ class SectionIdViewHelper extends AbstractViewHelper implements CompilableInterf
      * @return string the altered string.
      * @api
      */
-    public function render($value = NULL) {
+    public function render($value = null)
+    {
         return self::renderStatic(array('value' => $value), $this->buildRenderChildrenClosure(), $this->renderingContext);
     }
 
@@ -37,12 +39,13 @@ class SectionIdViewHelper extends AbstractViewHelper implements CompilableInterf
      *
      * @param array $arguments
      * @param \Closure $renderChildrenClosure
-     * @param \TYPO3\Fluid\Core\Rendering\RenderingContextInterface $renderingContext
+     * @param RenderingContextInterface $renderingContext
      * @return string
      */
-    static public function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    {
         $value = $arguments['value'];
-        if ($value === NULL) {
+        if ($value === null) {
             $value = $renderChildrenClosure();
         }
 

@@ -1,11 +1,11 @@
-TYPO3:
-  TypoScript:
+Neos:
+  Fusion:
     defaultContext:
-      'Onedrop.SectionMenu.Section': 'Onedrop\SectionMenu\Eel\Helper\SectionHelper'
+      'Onedrop.SectionMenu.Section': 'Onedrop\SectionMenu\EelHelper\SectionHelper'
   Neos:
-    typoScript:
+    fusion:
       autoInclude:
-        'Onedrop.SectionMenu': TRUE
+        'Onedrop.SectionMenu': true
     userInterface:
       translation:
         autoInclude:

@@ -1,0 +1,22 @@
+prototype(Onedrop.SectionMenu:Menu) < prototype(Neos.NodeTypes:Menu) {
+    @class = 'Onedrop\\SectionMenu\\FusionObjects\\MenuImplementation'
+    templatePath = 'resource://Onedrop.SectionMenu/Private/Templates/FusionObjects/Menu.html'
+    node = ${node}
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${documentNode}
+            node = ${node}
+        }
+        entryTags {
+            1 = 'NodeType_Neos.Neos:Document'
+            2 = ${'Node_' + node.identifier}
+            3 = ${'NodeType_Onedrop.SectionMenu:Section'}
+        }
+    }
+    listAttributes = Neos.Fusion:Attributes
+}
+
+prototype(Onedrop.SectionMenu:Section) < prototype(Neos.NodeTypes:Headline) {
+    attributes.id = ${Onedrop.SectionMenu.Section.htmlId(String.stripTags(q(node).property('title')))}
+}

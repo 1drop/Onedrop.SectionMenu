@@ -1,13 +1,20 @@
 # Onedrop.SectionMenu
 
 This package provides an additional menu element ``Onedrop.SectionMenu:Menu`` which can be used as a replacement 
-of ``TYPO3.Neos:Menu`` to provide a section based navigation.
+of ``Neos.Neos:Menu`` to provide a section based navigation.
 
 This is especially useful if you're building a onepager and would like to have a dynamic navigation
 menu as you know it from Neos.
 
 This package also adds the NodeType ``Onedrop.SectionMenu:Section`` which is highly similar 
-to a ``TYPO3.Neos.Nodetypes:Headline`` which is used target anchors of the generated section menu.
+to a ``Neos.Nodetypes:Headline`` which is used target anchors of the generated section menu.
+
+## Compatibility
+
+| Neos Version     | Onedrop.SectionMenu Version  |
+|------------------|------------------------------|
+| Neos 3.x         | 2.x                          |
+| Neos 2.3 LTS     | 1.x                          |
 
 ## How-To:
 
@@ -18,9 +25,9 @@ Use the command ``composer require onedrop/sectionmenu`` to add this package as 
 
 ## Usage: 
 
-### TypoScript:
+### Fusion:
 
-You can use the ``Onedrop.SectionMenu:Menu`` TS object as a replacement for the regular ``TYPO3.Neos:Menu``
+You can use the ``Onedrop.SectionMenu:Menu`` TS object as a replacement for the regular ``Neos.Neos:Menu``
 element e.g.
 
     page = Page {  

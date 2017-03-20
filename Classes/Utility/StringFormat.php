@@ -6,7 +6,8 @@ namespace Onedrop\SectionMenu\Utility;
  *
  * @package Onedrop\SectionMenu\Utility
  */
-class StringFormat {
+class StringFormat
+{
 
     /**
      * Only keeps allowed characters in string for usage in
@@ -17,7 +18,8 @@ class StringFormat {
      * @param string $input
      * @return string
      */
-    public static function htmlId($input) {
+    public static function htmlId($input)
+    {
         $input = str_replace(' ', '-', $input);
         $input = str_replace('/', '-', $input);
         $input = str_replace(',', '-', $input);
@@ -27,7 +29,7 @@ class StringFormat {
         $input = str_replace('ü', 'ue', $input);
         $input = str_replace('ö', 'oe', $input);
         $input = preg_replace('/[^[:alnum:]]/', '', trim($input));
-        while (strpos($input, '--') !== FALSE) {
+        while (strpos($input, '--') !== false) {
             $input = str_replace('--', '-', $input);
         }
         return $input;

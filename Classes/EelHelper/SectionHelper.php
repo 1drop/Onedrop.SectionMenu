@@ -1,24 +1,26 @@
 <?php
 
-namespace Onedrop\SectionMenu\Eel\Helper;
+namespace Onedrop\SectionMenu\EelHelper;
 
 use Onedrop\SectionMenu\Utility\StringFormat;
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Eel\ProtectedContextAwareInterface;
+use Neos\Flow\Annotations as Flow;
+use Neos\Eel\ProtectedContextAwareInterface;
 
 /**
  * String helpers for Eel contexts
  *
  * @Flow\Proxy(false)
  */
-class SectionHelper implements ProtectedContextAwareInterface {
+class SectionHelper implements ProtectedContextAwareInterface
+{
 
     /**
      * @param string $methodName
      * @return boolean
      */
-    public function allowsCallOfMethod($methodName) {
-        return TRUE;
+    public function allowsCallOfMethod($methodName)
+    {
+        return true;
     }
 
     /**
@@ -28,8 +30,8 @@ class SectionHelper implements ProtectedContextAwareInterface {
      * @param string $string
      * @return string The string formatted to be used in ID attribute
      */
-    public function htmlId($string) {
+    public function htmlId($string)
+    {
         return StringFormat::htmlId($string);
     }
-
 }
